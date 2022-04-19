@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import Login from "./Login";
 import Nav from "./Nav";
 import Home from "./Home";
+import Learn from "./Learn";
+import Quiz from "./Quiz";
 
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Lorem from "./Lorem";
 
 function Layout() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -19,8 +22,9 @@ function Layout() {
         <div className="container">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/learn" />
-            <Route path="/quiz" />
+            <Route exact path="/learn/:title" element={<Lorem />} />
+            <Route path="/learn" element={<Learn />} />
+            <Route path="/quiz" element={<Quiz />} />
             <Route path="/build" />
           </Routes>
         </div>
