@@ -24,14 +24,14 @@ function Layout() {
   return (
     <React.Fragment>
       <BrowserRouter>
-        <Nav setToken={setToken}/>
+        <Nav setToken={setToken} />
         <div className="container">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route exact path="/learn/:title" element={<Lorem />} />
-            <Route path="/learn" element={<Learn />} />
-            <Route path="/quiz" element={<Quiz />} />
-            <Route path="/build" />
+            <Route path="/dnic-mockup/" element={<Home />} />
+            <Route exact path="/dnic-mockup/learn/:title" element={<Lorem />} />
+            <Route path="/dnic-mockup/learn" element={<Learn />} />
+            <Route path="/dnic-mockup/quiz" element={<Quiz />} />
+            <Route path="/dnic-mockup/build" />
           </Routes>
         </div>
       </BrowserRouter>

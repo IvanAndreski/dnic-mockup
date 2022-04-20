@@ -11,13 +11,16 @@ function Card(props) {
   test ? (url = "Start Quiz") : (url = `/learn/${object.title}`);
 
   return (
-    <div className="card">
+    <div className="card mt-3 mb-3">
       <img
         src={object.image}
         className="card-img-top"
         alt="..."
-        width="150px"
-        height="90px"
+        style={{
+          width: "100%",
+          height: "15vw",
+          objectFit: "cover",
+        }}
       />
       <div className="card-body">
         <h5 className="card-title" style={{ maxHeight: "20px" }}>
