@@ -1,10 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Nav(props) {
-  const { setLoggedIn } = props;
+function Nav({ setToken }) {
   const handleClick = () => {
-    setLoggedIn(false);
+    setToken(undefined);
   };
 
   return (

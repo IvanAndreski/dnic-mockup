@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+
+import Login from "./Login";
 
 function Home() {
   return (
@@ -15,10 +17,10 @@ function Home() {
         <h1 className="display-5 fw-bold">Welcome</h1>
         <div className="col-lg-6 mx-auto">
           <p className="lead mb-4">
-            Quickly learn everything you need to know about choosing components for your
-            new computer. Resources are available for every single component.
-            After finishing with every quiz, you will be able to build you
-            perfect computer!
+            Quickly learn everything you need to know about choosing components
+            for your new computer. Resources are available for every single
+            component. After finishing with every quiz, you will be able to
+            build you perfect computer!
           </p>
           <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
             <Link

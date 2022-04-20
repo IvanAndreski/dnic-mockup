@@ -1,9 +1,9 @@
 import React from "react";
 
 function Login(props) {
-  const { setLoggedIn } = props;
+  const { setToken } = props;
   const handleClick = () => {
-    setLoggedIn(true);
+    setToken("yes");
   };
 
   return (

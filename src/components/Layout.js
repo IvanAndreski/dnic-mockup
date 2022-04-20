@@ -1,24 +1,30 @@
 import React, { useState } from "react";
-import Login from "./Login";
 import Nav from "./Nav";
 import Home from "./Home";
 import Learn from "./Learn";
 import Quiz from "./Quiz";
+import Login from "./Login";
 
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Lorem from "./Lorem";
 
 function Layout() {
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [token, setToken] = useState();
 
-  return !loggedIn ? (
-    <div className="container">
-      <Login setLoggedIn={setLoggedIn} />
-    </div>
-  ) : (
+  if (!token) {
+    return (
+      <div className="container d-flex justify-content-center mt-5">
+        <div className="col-md-5">
+          <Login setToken={setToken} />
+        </div>
+      </div>
+    );
+  }
+
+  return (
     <React.Fragment>
       <BrowserRouter>
-        <Nav setLoggedIn={setLoggedIn} />
+        <Nav setToken={setToken}/>
         <div className="container">
           <Routes>
             <Route path="/" element={<Home />} />
