@@ -9,7 +9,7 @@ function Nav({ setToken }) {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/dnic-mockup/">
+        <Link className="navbar-brand" to="/">
           Home
         </Link>
         <button
@@ -26,17 +26,17 @@ function Nav({ setToken }) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link" to="/dnic-mockup/learn">
+              <Link className="nav-link" to="/learn">
                 Learn
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/dnic-mockup/quiz">
+              <Link className="nav-link" to="/quiz">
                 Quiz
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/dnic-mockup/build">
+              <Link className="nav-link" to="/build">
                 Build a computer
               </Link>
             </li>

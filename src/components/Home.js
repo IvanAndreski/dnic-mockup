@@ -26,7 +26,7 @@ function Home() {
             <Link
               type="button"
               className="btn btn-primary btn-lg px-4 gap-3"
-              to="/dnic-mockup/learn"
+              to="/learn"
             >
               Get Started
             </Link>

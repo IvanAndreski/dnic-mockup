@@ -5,7 +5,7 @@ import Learn from "./Learn";
 import Quiz from "./Quiz";
 import Login from "./Login";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Lorem from "./Lorem";
 
 function Layout() {
@@ -23,18 +23,18 @@ function Layout() {
 
   return (
     <React.Fragment>
-      <BrowserRouter>
+      <HashRouter>
         <Nav setToken={setToken} />
         <div className="container">
           <Routes>
-            <Route path="/dnic-mockup/" element={<Home />} />
-            <Route exact path="/dnic-mockup/learn/:title" element={<Lorem />} />
-            <Route path="/dnic-mockup/learn" element={<Learn />} />
-            <Route path="/dnic-mockup/quiz" element={<Quiz />} />
-            <Route path="/dnic-mockup/build" />
+            <Route path="/" element={<Home />} />
+            <Route exact path="/learn/:title" element={<Lorem />} />
+            <Route path="/learn" element={<Learn />} />
+            <Route path="/quiz" element={<Quiz />} />
+            <Route path="/build" />
           </Routes>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </React.Fragment>
   );
 }
