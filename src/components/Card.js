@@ -8,7 +8,7 @@ function Card(props) {
   let button;
   test ? (button = "Start Quiz") : (button = "Learn");
   let url;
-  test ? (url = "Start Quiz") : (url = `/learn/${object.title}`);
+  test ? (url = `/quiz/${object.title}`) : (url = `/learn/${object.title}`);
 
   return (
     <div className="card mt-3 mb-3">
@@ -18,7 +18,7 @@ function Card(props) {
         alt="..."
         style={{
           width: "100%",
-          height: "15vw",
+          height: "40vh",
           objectFit: "cover",
         }}
       />

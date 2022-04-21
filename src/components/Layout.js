@@ -7,6 +7,7 @@ import Login from "./Login";
 
 import { HashRouter, Routes, Route } from "react-router-dom";
 import Lorem from "./Lorem";
+import QuizUser from "./QuizUser";
 
 function Layout() {
   const [token, setToken] = useState();
@@ -31,6 +32,7 @@ function Layout() {
             <Route exact path="/learn/:title" element={<Lorem />} />
             <Route path="/learn" element={<Learn />} />
             <Route path="/quiz" element={<Quiz />} />
+            <Route exact path="/quiz/:title" element={<QuizUser />} />
             <Route path="/build" />
           </Routes>
         </div>

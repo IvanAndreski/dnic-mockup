@@ -23,7 +23,12 @@ function Learn() {
     ));
   };
 
-  return <div className="row mt-4">{renderLearns()}</div>;
+  return (
+    <div className="row mt-4">
+      <h1>Start your learning process</h1>
+      {renderLearns()}
+    </div>
+  );
 }
 
 export default Learn;

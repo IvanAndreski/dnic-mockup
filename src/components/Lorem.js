@@ -1,12 +1,38 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useState } from "react";
+import { useParams, Link } from "react-router-dom";
 
 function Lorem() {
   const { title } = useParams();
+  const [num, setNum] = useState(1);
+
+  const changeNum = (e) => {
+    const type = e.target.id;
+
+    if (type === "next") {
+      if (num !== 3) setNum(num + 1);
+    } else if (type === "previous") {
+      if (num !== 1) setNum(num - 1);
+    }
+  };
+
+  const renderQuiz = () => {
+    if (num === 3) {
+      return (
+        <React.Fragment>
+          <div style={{ width: "100%" }}>
+            <h3>Are you ready to test your knowledge?</h3>
+            <Link className="btn btn-primary" to={`/quiz/${title}`}>
+              Yes take me to the quiz
+            </Link>
+          </div>
+        </React.Fragment>
+      );
+    }
+  };
 
   return (
     <div>
-      <h1>{title}</h1>
+      <h1>{title + " - Page: " + num}</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Cursus metus aliquam
@@ -62,6 +88,25 @@ function Lorem() {
         accumsan in. Aliquet enim tortor at auctor urna. Enim tortor at auctor
         urna. Risus pretium quam vulputate dignissim suspendisse in est ante.
       </p>
+      <div className="row">
+        <div className="col-md-6">{renderQuiz()}</div>
+        <div className="col-md-6">
+          <button
+            className="btn btn-outline-secondary"
+            id="previous"
+            onClick={changeNum}
+          >
+            Previous
+          </button>
+          <button
+            className="btn btn-outline-secondary"
+            id="next"
+            onClick={changeNum}
+          >
+            Next
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
