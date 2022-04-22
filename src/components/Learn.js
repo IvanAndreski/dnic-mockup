@@ -4,7 +4,7 @@ import Card from "./Card";
 
 import { learn } from "../mock_data/learn";
 
-function Learn() {
+function Learn({score}) {
   const [learns, setLearns] = useState([]);
 
   useEffect(() => {
@@ -18,7 +18,7 @@ function Learn() {
   const renderLearns = () => {
     return learns.map((l, i) => (
       <div key={i} className="col-md-3">
-        <Card object={l} test={false} />
+        <Card object={l} test={false} score={score}/>
       </div>
     ));
   };

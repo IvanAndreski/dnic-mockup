@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 
 import Question from "./Question";
 
-function QuizUser() {
+function QuizUser({ score, setScore }) {
   const { title } = useParams();
   const navigate = useNavigate();
   const numQuestions = [1, 2, 3, 4, 5];
@@ -14,6 +14,10 @@ function QuizUser() {
 
   const handleSubmit = () => {
     const quizResult = Math.floor(Math.random() * 101);
+    setScore({
+      ...score,
+      [title]: quizResult,
+    });
 
     if (quizResult < 50) {
       Swal.fire({

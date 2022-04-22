@@ -1,6 +1,6 @@
 import React from "react";
 
-function Question({ i }) {
+function Question({ i}) {
   return (
     <React.Fragment>
       <div className="d-flex justify-content-center">

@@ -1,14 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { ProgressBar } from "react-bootstrap";
 
 function Card(props) {
-  const { object, test } = props;
+  const { object, test, score } = props;
   let text;
   test ? (text = "Test you knowledge of ") : (text = "Learn about ");
   let button;
   test ? (button = "Start Quiz") : (button = "Learn");
   let url;
-  test ? (url = `/quiz/${object.title}`) : (url = `/learn/${object.title}`);
+  test ? (url = `/quiz/${object.id}`) : (url = `/learn/${object.id}`);
 
   return (
     <div className="card mt-3 mb-3">
@@ -27,7 +28,14 @@ function Card(props) {
           {object.title}
         </h5>
         <p className="card-text">{text + object.id}</p>
-        <Link to={url} className="btn btn-primary">
+        <ProgressBar
+          striped
+          variant="info"
+          now={score[object.id]}
+          label="Progress"
+          className="mb-3"
+        />
+        <Link to={url} className="btn btn-outline-secondary">
           {button}
         </Link>
       </div>
