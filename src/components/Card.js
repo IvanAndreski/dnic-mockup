@@ -32,7 +32,7 @@ function Card(props) {
           striped
           variant="info"
           now={score[object.id]}
-          label="Progress"
+          label={`${score[object.id]}%`}
           className="mb-3"
         />
         <Link to={url} className="btn btn-outline-secondary">
