@@ -17,7 +17,7 @@ function Layout() {
     motherboards: 0,
     ram_memory: 0,
     graphics_cards: 0,
-    soli_state_drives: 0,
+    solid_state_drives: 0,
     hard_drives: 0,
     power_supplies: 0,
     pc_cases: 0,
