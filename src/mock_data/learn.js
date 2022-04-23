@@ -28,7 +28,7 @@ export const learn = [
       "https://www.newegg.com/insider/wp-content/uploads/2020/09/msi-trio-10g-RTX-3080.jpeg",
   },
   {
-    id: "solid_state drives",
+    id: "solid_state_drives",
     title: "Solid State Drive",
     link: "/dnic-mockup/",
     image: "https://c1.neweggimages.com/ProductImage/20-147-804-V04.jpg",
